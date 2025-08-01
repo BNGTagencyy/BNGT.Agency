@@ -342,7 +342,7 @@
             }
           }
           .contact-btn {
-            background:  linear-gradient(90deg, #00d2ff, #3a7bd5);;       /* Black button */
+            background:linear-gradient(90deg, #00d2ff, #3a7bd5);;       /* Black button */
             color: #fff;            /* White text */
             padding: 5px 18px;
             border-radius: 16px;
@@ -356,3 +356,4 @@
             transform: translateY(-3px);
             box-shadow: 0 10px 20px rgba(0, 210, 255, 0.3);
           }
+
