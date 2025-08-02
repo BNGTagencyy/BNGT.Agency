@@ -67,17 +67,7 @@
             align-items: left;
             text-align: left;
             padding: 0 20px;
-            position: relative;
-            top: -110rem;
         }
-
-        .brand-logo {
-            position: relative;
-            bottom: 44rem;
-            left: 1rem;
-            height: auto;
-            width: 2100px;
-          }
 
         .hero h1 {
             font-size: 4rem;
@@ -89,7 +79,7 @@
         }
 
         .hero h4{
-            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             font-size: 3rem;
             background: linear-gradient(90deg, #00d2ff, #3a7bd5);
             -webkit-background-clip: text;
