@@ -8,7 +8,7 @@
         body {
             overflow-x: hidden;
             color: white;
-            background: #0a0a1a;
+            background: #ffffff;
         }
 
         #canvas-container {
@@ -31,16 +31,11 @@
             justify-content: space-between;
             align-items: center;
             padding: 20px 5%;
+            position: relative;
+            top: -80px;
         }
 
-        .logo {
-            font-size: 28px;
-            font-weight: 700;
-            background: linear-gradient(90deg, #00d2ff, #3a7bd5);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
+
 
         nav ul {
             display: flex;
@@ -52,7 +47,7 @@
         }
 
         nav ul li a {
-            color: #ccc;
+            color: #000000;
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s;
@@ -69,10 +64,20 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: center;
-            text-align: center;
+            align-items: left;
+            text-align: left;
             padding: 0 20px;
+            position: relative;
+            top: -110rem;
         }
+
+        .brand-logo {
+            position: relative;
+            bottom: 44rem;
+            left: 1rem;
+            height: auto;
+            width: 2100px;
+          }
 
         .hero h1 {
             font-size: 4rem;
@@ -83,16 +88,24 @@
             color: transparent;
         }
 
+        .hero h4{
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 3rem;
+            background: linear-gradient(90deg, #00d2ff, #3a7bd5);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
         .hero p {
             font-size: 1.2rem;
             max-width: 700px;
             margin-bottom: 30px;
-            color: #aaa;
+            color: #000000;
         }
 
         .btn {
             display: inline-block;
-            padding: 12px 30px;
+            padding: 12px 35px;
             background: linear-gradient(90deg, #00d2ff, #3a7bd5);
             color: white;
             border-radius: 30px;
@@ -101,6 +114,8 @@
             transition: transform 0.3s, box-shadow 0.3s;
             border: none;
             cursor: pointer;
+            width: 183px;
+        
         }
 
         .btn:hover {
@@ -135,7 +150,7 @@
             padding: 30px;
             transition: transform 0.3s, background 0.3s;
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(0, 0, 0, 0.815);
         }
 
         .service-card:hover {
@@ -150,12 +165,13 @@
         }
 
         .service-card h3 {
+            color: #000000;
             font-size: 1.5rem;
             margin-bottom: 15px;
         }
 
         .service-card p {
-            color: #aaa;
+            color: #000000;
             line-height: 1.6;
         }
 
@@ -209,7 +225,7 @@
             padding: 40px;
             border-radius: 15px;
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgb(0, 0, 0);
         }
 
         .form-group {
@@ -219,17 +235,17 @@
         .form-group label {
             display: block;
             margin-bottom: 8px;
-            color: #ccc;
+            color: #000000;
         }
 
         .form-group input,
         .form-group textarea {
             width: 100%;
             padding: 12px 15px;
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(0, 0, 0, 0.2);
             border-radius: 8px;
-            color: white;
+            color: rgb(43, 41, 41);
             font-size: 1rem;
         }
 
@@ -280,7 +296,7 @@
           }
           
           .pack-card {
-            background: #d4d4e0;
+            background: #ffffff;
             border: 2px solid #000;
             border-radius: 12px;
             padding: 25px 20px;
@@ -356,4 +372,3 @@
             transform: translateY(-3px);
             box-shadow: 0 10px 20px rgba(0, 210, 255, 0.3);
           }
-
