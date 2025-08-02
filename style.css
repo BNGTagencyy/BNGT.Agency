@@ -32,7 +32,6 @@
             align-items: center;
             padding: 20px 5%;
             position: relative;
-            top: -80px;
         }
 
 
@@ -362,3 +361,4 @@
             transform: translateY(-3px);
             box-shadow: 0 10px 20px rgba(0, 210, 255, 0.3);
           }
+
