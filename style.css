@@ -58,6 +58,11 @@
             color: #3a7bd5;
         }
 
+       .logo {
+              position:relative;
+              top:-20px;
+       }
+
         .hero {
             height: 100vh;
             display: flex;
@@ -361,4 +366,5 @@
             transform: translateY(-3px);
             box-shadow: 0 10px 20px rgba(0, 210, 255, 0.3);
           }
+
 
