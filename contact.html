@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Contact — BNGT Agency</title>
+<link rel="stylesheet" href="css/style.css"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet"></head>
+<link rel="icon" type="image/png" href="assets/BNGTicon.png">
+<body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <div id="canvas-container"></div>
+  <div class="content">
+  <header class="header container">
+    <a class="brand" href="index.html"><img src="assets/logo.svg" alt="BNGT logo"></a>
+    <nav class="nav"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="contact.html" class="btn-ghost">Contact</a><label class="theme-swapper" for="theme-toggle-input">
+      <input type="checkbox" id="theme-toggle-input">
+      <span class="slider"></span></nav><button class="nav-toggle" aria-label="Toggle navigation">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+  </header>
+  <main>
+    <section class="section container">
+      <div style="height: 150px;"></div>
+      <h2>Contact</h2>
+      <p class="lead">Tell us about your project — we'll reply within 48 hours.</p>
+      <div class="contact-grid">
+        <div class="card">
+          <h3>Get in touch</h3>
+          <form id="contactForm">
+            <div style="margin-bottom:16px">
+              <label for="name" style="display:block;margin-bottom:4px;font-weight:500">Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div style="margin-bottom:16px">
+              <label for="email" style="display:block;margin-bottom:4px;font-weight:500">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div style="margin-bottom:16px">
+              <label for="message" style="display:block;margin-bottom:4px;font-weight:500">Message</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%">Send message</button>
+            <p id="contactNote" style="margin-top:12px;text-align:center;font-size:0.9rem"></p>
+          </form>
+        </div>
+        <div class="card">
+          <h3>Testimonials</h3>
+          <div class="testimonial" style="margin-bottom:16px">
+            <p>"BNGT delivered a flawless website that lifted conversions."</p>
+            <small>— CEO, Startup X</small>
+          </div>
+          <div class="testimonial">
+            <p>"Creative, responsive and on time."</p>
+            <small>— Head of Marketing, Brand Y</small>
+          </div>
+        </div>
+        <aside class="card">
+          <h4>Contact info</h4>
+          <p><strong>Instagram</strong>: bngt.agency</p>
+          <p><strong>Founder</strong>: Amine Bigfaine</p>
+          <p><strong>Location</strong>: Morocco (remote)</p>
+          <h4 style="margin-top:12px">Follow us</h4>
+          <p><a href="https://www.instagram.com/bngt.agency/" target="_blank">Instagram</a> | <a href="https://www.linkedin.com/in/amine-bigfaine/" target="_blank">LinkedIn</a></p>
+          <div style="margin-top:16px;text-align:center">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.instagram.com/bngt.agency/" alt="Instagram QR Code" style="border-radius:8px;">
+          </div>
+          <h4 style="margin-top:16px">Newsletter</h4>
+          <p>Subscribe for updates and insights.</p>
+          <form style="margin-top:12px">
+            <input type="email" placeholder="Your email" style="width:100%;margin-bottom:8px;padding:8px;border-radius:6px;border:1px solid rgba(15,23,32,0.06);">
+            <button type="submit" class="btn btn-primary" style="width:100%">Subscribe</button>
+          </form>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="footer"><div class="container"><p>© <span data-year></span> BNGT Agency</p></div></footer>
+  <script src="js/main.js"></script>
+  <script>
+  document.getElementById('contactForm').addEventListener('submit', async function(e){
+    e.preventDefault();
+    const note = document.getElementById('contactNote');
+    note.textContent = 'Sending...';
+    const fd = new FormData(e.target);
+    try{
+      const res = await fetch('/php/contact.php', {method:'POST', body:fd});
+      const json = await res.json();
+      if(json.status === 'ok'){ note.textContent = 'Message sent — thank you!'; e.target.reset(); }
+      else { note.textContent = 'Error: ' + (json.message || 'failed to send'); }
+    }catch(err){
+      note.textContent = 'Could not send — if testing locally, configure a PHP server or use Formspree.';
+    }
+  });
+  </script>
+</body>
+</html>
