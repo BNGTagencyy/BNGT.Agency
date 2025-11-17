@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Contact — BNGT Agency</title>
+<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Portfolio — BNGT Agency</title>
 <link rel="stylesheet" href="css/style.css"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet"></head>
 <link rel="icon" type="image/png" href="assets/BNGTicon.png">
 <body>
@@ -9,91 +9,103 @@
   <div class="content">
   <header class="header container">
     <a class="brand" href="index.html"><img src="assets/logo.svg" alt="BNGT logo"></a>
-    <nav class="nav"><a href="index.html" data-i18n="nav.home">Home</a><a href="about.html" data-i18n="nav.about">About</a><a href="services.html" data-i18n="nav.services">Services</a><a href="portfolio.html" data-i18n="nav.portfolio">Portfolio</a><a href="contact.html" class="btn-ghost" data-i18n="nav.contact">Contact</a><label class="theme-swapper" for="theme-toggle-input">
-      <input type="checkbox" id="theme-toggle-input">
-      <span class="slider"></span></label>
+    <nav class="nav"><a href="index.html" data-i18n="nav.home">Home</a><a href="about.html" data-i18n="nav.about">About</a><a href="services.html" data-i18n="nav.services">Services</a><a href="portfolio.html" class="active" data-i18n="nav.portfolio">Portfolio</a><a href="contact.html" class="btn-ghost" data-i18n="nav.contact">Contact</a>
+      <label class="theme-swapper" for="theme-toggle-input">
+        <input type="checkbox" id="theme-toggle-input">
+        <span class="slider"></span>
+      </label>
       <select id="lang-select" class="lang-select" aria-label="Language"><option value="en">EN</option><option value="fr">FR</option><option value="ar">AR</option><option value="de">DE</option></select>
       <select id="currency-select" class="lang-select" aria-label="Currency"><option value="MAD">MAD</option><option value="USD">USD</option><option value="EUR">EUR</option></select>
-    </nav><button class="nav-toggle" aria-label="Toggle navigation">
+    </nav>
+      <button class="nav-toggle" aria-label="Toggle navigation">
         <span class="nav-toggle-bar"></span>
         <span class="nav-toggle-bar"></span>
         <span class="nav-toggle-bar"></span>
       </button>
   </header>
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+
   <main>
     <section class="section container">
       <div style="height: 150px;"></div>
-      <h2 data-i18n="contact.title">Contact</h2>
-      <p class="lead" data-i18n="contact.lead">Tell us about your project — we'll reply within 48 hours.</p>
-      <div class="contact-grid">
-        <div class="card">
-          <h3 data-i18n="contact.form.title">Get in touch</h3>
-          <form id="contactForm">
-            <div style="margin-bottom:16px">
-              <label for="name" style="display:block;margin-bottom:4px;font-weight:500" data-i18n="contact.form.name">Name</label>
-              <input type="text" id="name" name="name" required>
-            </div>
-            <div style="margin-bottom:16px">
-              <label for="email" style="display:block;margin-bottom:4px;font-weight:500" data-i18n="contact.form.email">Email</label>
-              <input type="email" id="email" name="email" required>
-            </div>
-            <div style="margin-bottom:16px">
-              <label for="message" style="display:block;margin-bottom:4px;font-weight:500" data-i18n="contact.form.message">Message</label>
-              <textarea id="message" name="message" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary" style="width:100%" data-i18n="contact.form.submit">Send message</button>
-            <p id="contactNote" style="margin-top:12px;text-align:center;font-size:0.9rem"></p>
-          </form>
-        </div>
-        <div class="card">
-          <h3 data-i18n="contact.testimonials.title">Testimonials</h3>
-          <div class="testimonial" style="margin-bottom:16px">
-            <p data-i18n="contact.testimonials.t1">"BNGT delivered a flawless website that lifted conversions."</p>
-            <small>— CEO, Startup X</small>
-          </div>
-          <div class="testimonial">
-            <p data-i18n="contact.testimonials.t2">"Creative, responsive and on time."</p>
-            <small>— Head of Marketing, Brand Y</small>
-          </div>
-        </div>
-        <aside class="card">
-          <h4 data-i18n="contact.info.title">Contact info</h4>
-          <p><strong data-i18n="contact.info.instagramLabel">Instagram</strong>: bngt.agency</p>
-          <p><strong data-i18n="contact.info.founderLabel">Founder</strong>: Amine Bigfaine</p>
-          <p><strong data-i18n="contact.info.locationLabel">Location</strong>: Morocco (remote)</p>
-          <h4 style="margin-top:12px" data-i18n="contact.follow.title">Follow us</h4>
-          <p><a href="https://www.instagram.com/bngt.agency/" target="_blank">Instagram</a> | <a href="https://www.linkedin.com/in/amine-bigfaine/" target="_blank">LinkedIn</a></p>
-          <div style="margin-top:16px;text-align:center">
-            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.instagram.com/bngt.agency/" alt="Instagram QR Code" loading="lazy" style="border-radius:8px;">
-          </div>
-          <h4 style="margin-top:16px" data-i18n="contact.news.title">Newsletter</h4>
-          <p data-i18n="contact.news.lead">Subscribe for updates and insights.</p>
-          <form style="margin-top:12px">
-            <input type="email" placeholder="Your email" data-i18n-placeholder="contact.news.placeholder" style="width:100%;margin-bottom:8px;padding:8px;border-radius:6px;border:1px solid rgba(15,23,32,0.06);">
-            <button type="submit" class="btn btn-primary" style="width:100%" data-i18n="contact.news.submit">Subscribe</button>
-          </form>
-        </aside>
+      <h2 data-i18n="portfolio.title">Portfolio</h2>
+      <p class="lead" data-i18n="portfolio.lead">Case studies & projects.</p>
+
+      <!-- YOUR STATIC PORTFOLIO -->
+      <div class="portfolio-grid">
+        <article id="p1" class="p-item"><img src="assets/images/portfolio-1.png" alt="" loading="lazy"><div class="overlay"><p data-i18n="portfolio.item1">Branding & site</p></div></article>
+        <article id="p2" class="p-item"><img src="assets/images/portfolio-2.jpg" alt="" loading="lazy"><div class="overlay"><p data-i18n="portfolio.item2">eCommerce</p></div></article>
+        <article id="p3" class="p-item"><img src="assets/images/portfolio-3.jpg" alt="" loading="lazy"><div class="overlay"><p data-i18n="portfolio.item3">Product launch</p></div></article>
       </div>
+
+      <!-- INSTAGRAM FEED SECTION -->
+      <div style="margin-top:60px;"></div>
+      <h2 style="margin-bottom:10px;" data-i18n="portfolio.ig.title">Latest Instagram Work</h2>
+      <p class="lead" data-i18n="portfolio.ig.lead">Automatically synced from @bngt.agency</p>
+
+      <div id="insta-grid" class="insta-grid"></div>
     </section>
   </main>
-  <footer class="footer"><div class="container"><p data-i18n="footer.copyShort">© <span data-year></span> BNGT Agency</p></div></footer>
+
+  <footer class="footer"><div class="container"><p>© <span data-year></span> BNGT Agency</p></div></footer>
   <div id="cookieBanner" class="cookie-banner" style="display:none"><p data-i18n="cookie.text">We use cookies to improve your experience.</p><button id="cookieAccept" class="btn btn-primary" data-i18n="cookie.accept">Accept</button></div>
   <script src="js/main.js"></script>
+
+  <!-- INSTAGRAM FEED SCRIPT -->
   <script>
-  document.getElementById('contactForm').addEventListener('submit', async function(e){
-    e.preventDefault();
-    const note = document.getElementById('contactNote');
-    note.textContent = 'Sending...';
-    const fd = new FormData(e.target);
-    try{
-      const res = await fetch('/php/contact.php', {method:'POST', body:fd});
-      const json = await res.json();
-      if(json.status === 'ok'){ note.textContent = 'Message sent — thank you!'; e.target.reset(); }
-      else { note.textContent = 'Error: ' + (json.message || 'failed to send'); }
-    }catch(err){
-      note.textContent = 'Could not send — if testing locally, configure a PHP server or use Formspree.';
+    const userId = "YOUR_USER_ID";  
+    const token = "YOUR_ACCESS_TOKEN";  
+    const limit = 9;
+
+    async function loadIG() {
+      try {
+        const url = `https://graph.instagram.com/${userId}/media?fields=id,media_url,permalink,media_type&access_token=${token}&limit=${limit}`;
+        const res = await fetch(url);
+        const data = await res.json();
+
+        const grid = document.getElementById('insta-grid');
+
+        data.data.forEach(post => {
+          if (post.media_type === "IMAGE" || post.media_type === "CAROUSEL_ALBUM") {
+            grid.innerHTML += `
+              <a class="insta-item" href="${post.permalink}" target="_blank">
+                <img src="${post.media_url}" alt="Instagram Post">
+              </a>
+            `;
+          }
+        });
+
+      } catch (error) {
+        console.log("Instagram feed error:", error);
+      }
     }
-  });
+
+    loadIG();
   </script>
+
+  <!-- INSTAGRAM GRID CSS -->
+  <style>
+    .insta-grid {
+      margin-top: 25px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .insta-grid img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 14px;
+      transition: transform .25s ease, box-shadow .25s ease;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    }
+
+    .insta-grid img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    }
+  </style>
+
 </body>
 </html>
