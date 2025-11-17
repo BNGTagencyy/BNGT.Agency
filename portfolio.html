@@ -9,41 +9,46 @@
   <div class="content">
   <header class="header container">
     <a class="brand" href="index.html"><img src="assets/logo.svg" alt="BNGT logo"></a>
-    <nav class="nav"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="portfolio.html" class="active">Portfolio</a><a href="contact.html" class="btn-ghost">Contact</a>
+    <nav class="nav"><a href="index.html" data-i18n="nav.home">Home</a><a href="about.html" data-i18n="nav.about">About</a><a href="services.html" data-i18n="nav.services">Services</a><a href="portfolio.html" class="active" data-i18n="nav.portfolio">Portfolio</a><a href="contact.html" class="btn-ghost" data-i18n="nav.contact">Contact</a>
       <label class="theme-swapper" for="theme-toggle-input">
         <input type="checkbox" id="theme-toggle-input">
         <span class="slider"></span>
-      </label></nav>
+      </label>
+      <select id="lang-select" class="lang-select" aria-label="Language"><option value="en">EN</option><option value="fr">FR</option><option value="ar">AR</option><option value="de">DE</option></select>
+      <select id="currency-select" class="lang-select" aria-label="Currency"><option value="MAD">MAD</option><option value="USD">USD</option><option value="EUR">EUR</option></select>
+    </nav>
       <button class="nav-toggle" aria-label="Toggle navigation">
         <span class="nav-toggle-bar"></span>
         <span class="nav-toggle-bar"></span>
         <span class="nav-toggle-bar"></span>
       </button>
   </header>
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
 
   <main>
     <section class="section container">
       <div style="height: 150px;"></div>
-      <h2>Portfolio</h2>
-      <p class="lead">Case studies & projects.</p>
+      <h2 data-i18n="portfolio.title">Portfolio</h2>
+      <p class="lead" data-i18n="portfolio.lead">Case studies & projects.</p>
 
       <!-- YOUR STATIC PORTFOLIO -->
       <div class="portfolio-grid">
-        <article id="p1" class="p-item"><img src="assets/images/portfolio-1.png" alt=""><div class="overlay"><p>Branding & site</p></div></article>
-        <article id="p2" class="p-item"><img src="assets/images/portfolio-2.jpg" alt=""><div class="overlay"><p>eCommerce</p></div></article>
-        <article id="p3" class="p-item"><img src="assets/images/portfolio-3.jpg" alt=""><div class="overlay"><p>Product launch</p></div></article>
+        <article id="p1" class="p-item"><img src="assets/images/portfolio-1.png" alt="" loading="lazy"><div class="overlay"><p data-i18n="portfolio.item1">Branding & site</p></div></article>
+        <article id="p2" class="p-item"><img src="assets/images/portfolio-2.jpg" alt="" loading="lazy"><div class="overlay"><p data-i18n="portfolio.item2">eCommerce</p></div></article>
+        <article id="p3" class="p-item"><img src="assets/images/portfolio-3.jpg" alt="" loading="lazy"><div class="overlay"><p data-i18n="portfolio.item3">Product launch</p></div></article>
       </div>
 
       <!-- INSTAGRAM FEED SECTION -->
       <div style="margin-top:60px;"></div>
-      <h2 style="margin-bottom:10px;">Latest Instagram Work</h2>
-      <p class="lead">Automatically synced from @bngt.agency</p>
+      <h2 style="margin-bottom:10px;" data-i18n="portfolio.ig.title">Latest Instagram Work</h2>
+      <p class="lead" data-i18n="portfolio.ig.lead">Automatically synced from @bngt.agency</p>
 
       <div id="insta-grid" class="insta-grid"></div>
     </section>
   </main>
 
   <footer class="footer"><div class="container"><p>© <span data-year></span> BNGT Agency</p></div></footer>
+  <div id="cookieBanner" class="cookie-banner" style="display:none"><p data-i18n="cookie.text">We use cookies to improve your experience.</p><button id="cookieAccept" class="btn btn-primary" data-i18n="cookie.accept">Accept</button></div>
   <script src="js/main.js"></script>
 
   <!-- INSTAGRAM FEED SCRIPT -->
