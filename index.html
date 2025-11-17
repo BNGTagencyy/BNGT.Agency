@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Home | BNGT Agency | Your Partner for Web Design, Branding & Marketing</title>
-  <meta name="description" content="BNGT Agency — web design, branding, and strategy by SuNNNy_r">
+  <meta name="description" content="BNGT Agency — glassmorphism UI, web design, branding, and strategy by Amine Bigfaine">
   <link rel="stylesheet" href="css/style.css">
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
@@ -15,30 +15,42 @@
     <header class="header container">
       <a class="brand" href="index.html"><img src="assets/logo.svg" alt="BNGT logo"></a>
       <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="portfolio.html" class="active">Portfolio</a>
-        <a href="contact.html" class="btn-ghost">Contact</a>
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="about.html" data-i18n="nav.about">About</a>
+        <a href="services.html" data-i18n="nav.services">Services</a>
+        <a href="portfolio.html" class="active" data-i18n="nav.portfolio">Portfolio</a>
+        <a href="contact.html" class="btn-ghost" data-i18n="nav.contact">Contact</a>
         <label class="theme-swapper" for="theme-toggle-input">
-        <input type="checkbox" id="theme-toggle-input">
-        <span class="slider"></span>
-      </label>
-    </nav>
+          <input type="checkbox" id="theme-toggle-input">
+          <span class="slider"></span>
+        </label>
+        <select id="lang-select" class="lang-select" aria-label="Language">
+          <option value="en">EN</option>
+          <option value="fr">FR</option>
+          <option value="ar">AR</option>
+          <option value="de">DE</option>
+        </select>
+        <select id="currency-select" class="lang-select" aria-label="Currency">
+          <option value="MAD">MAD</option>
+          <option value="USD">USD</option>
+          <option value="EUR">EUR</option>
+        </select>
+      </nav>
       <button class="nav-toggle" aria-label="Toggle navigation">
         <span class="nav-toggle-bar"></span>
         <span class="nav-toggle-bar"></span>
         <span class="nav-toggle-bar"></span>
       </button>
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
     </header>
   <main>
     <section class="hero" id="hero" aria-label="Hero">
       <div class="hero-panel" data-aos="fade-up">
-        <h1>We craft premium digital experiences — fast, beautiful, and effective.</h1>
-        <p class="lead"><strong>BNGT | Bigfaine Next Gen Tech</strong>, founded by <strong>@SuNNNy_r</strong>, blends design, strategy and engineering to help brands grow online.</p>
+        <h1 data-i18n="hero.title">We craft premium digital experiences — fast, beautiful, and effective.</h1>
+        <p class="lead" data-i18n="hero.lead"><strong>BNGT | Bigfaine Next Gen Tech</strong>, founded by <strong>@SuNNNy_r</strong>, blends design, strategy and engineering to help brands grow online.</p>
         <div style="display:flex;gap:12px;justify-content:center;margin-top:18px">
-          <a href="contact.html" class="btn btn-primary">Start a project</a>
-          <a href="portfolio.html" class="btn btn-ghost">View portfolio</a>
+          <a href="contact.html" class="btn btn-primary" data-i18n="hero.ctaStart">Start a project</a>
+          <a href="portfolio.html" class="btn btn-ghost" data-i18n="hero.ctaPortfolio">View portfolio</a>
         </div>
       </div>
     </section>
@@ -49,40 +61,40 @@
         <div>
           <h2 id="services-heading">Services</h2>
           <p class="lead">Full-service digital product & branding offerings designed to move metrics.</p>
-          <div class="services-grid" data-aos="fade-up" data-aos-delay="80">
+      <div class="services-grid" data-aos="fade-up" data-aos-delay="80">
             <div class="card">
               <img src="assets/images/web-development.png" alt="Web design">
-              <h3>Web Design & Development</h3>
-              <p>Responsive, scalable web applications with modern frameworks like React, Angular, and Vue.js.</p>
+              <h3 data-i18n="home.services.web.title">Web Design & Development</h3>
+              <p data-i18n="home.services.web.desc">Responsive, scalable web applications with modern frameworks like React, Angular, and Vue.js.</p>
             </div>
             <div class="card">
               <img src="assets/images/set-of-ui-ux.png" alt="Branding">
-              <h3>UI/UX Design</h3>
-              <p>Beautiful, intuitive interfaces designed to enhance user engagement and satisfaction.</p>
+              <h3 data-i18n="home.services.uiux.title">UI/UX Design</h3>
+              <p data-i18n="home.services.uiux.desc">Beautiful, intuitive interfaces designed to enhance user engagement and satisfaction.</p>
             </div>
             <div class="card">
               <img src="assets/images/website-maintenance-1.png" alt="Strategy">
-              <h3>Maintenance & Support</h3>
-              <p>Ongoing support, updates, and optimization to keep your digital products running smoothly.</p>
+              <h3 data-i18n="home.services.support.title">Maintenance & Support</h3>
+              <p data-i18n="home.services.support.desc">Ongoing support, updates, and optimization to keep your digital products running smoothly.</p>
             </div>
             <div class="card">
               <img src="assets/images/Digital Strategy.jpg" alt="Strategy">
-              <h3>Digital Strategy</h3>
-              <p>Comprehensive planning to align your digital products with business objectives and market needs.</p>
+              <h3 data-i18n="home.services.strategy.title">Digital Strategy</h3>
+              <p data-i18n="home.services.strategy.desc">Comprehensive planning to align your digital products with business objectives and market needs.</p>
             </div>
             <div style="margin-top:18px">
-              <a href="services.html" class="btn btn-ghost">Services Details</a>
+              <a href="services.html" class="btn btn-ghost" data-i18n="home.services.details">Services Details</a>
             </div>
           </div>
         </div>
         <aside>
           <div class="card" style="text-align:left">
-            <h4>Why BNGT</h4>
-            <p>We combine clean design with engineering discipline to deliver measurable results.</p>
+            <h4 data-i18n="home.why.title">Why BNGT</h4>
+            <p data-i18n="home.why.body">We combine clean design with engineering discipline to deliver measurable results.</p>
             <ul style="margin-top:12px;color:#475569">
-              <li>Focus on performance</li>
-              <li>Accessible & SEO friendly</li>
-              <li>Design systems & components</li>
+              <li data-i18n="home.why.li1">Focus on performance</li>
+              <li data-i18n="home.why.li2">Accessible & SEO friendly</li>
+              <li data-i18n="home.why.li3">Design systems & components</li>
             </ul>
           </div>
         </aside>
@@ -90,33 +102,33 @@
     </section>
 
     <section class="section container" id="portfolio" aria-labelledby="portfolio-heading">
-      <h2 id="portfolio-heading">portfolio</h2>
-      <p class="lead">A few projects showcasing design + results.</p>
+      <h2 id="portfolio-heading" data-i18n="home.portfolio.title">portfolio</h2>
+      <p class="lead" data-i18n="home.portfolio.lead">A few projects showcasing design + results.</p>
       <div class="portfolio-grid" data-aos="fade-up" data-aos-delay="80">
-        <a class="p-item" href="portfolio.html#p1"><img src="assets/images/portfolio-1.png" alt="Project one"><div class="overlay"><div><p>Branding & web</p></div></div></a>
-        <a class="p-item" href="portfolio.html#p2"><img src="assets/images/portfolio-2.jpg" alt="Project two"><div class="overlay"><div><p>eCommerce</p></div></div></a>
-        <a class="p-item" href="portfolio.html#p3"><img src="assets/images/portfolio-3.jpg" alt="Project three"><div class="overlay"><div><p>Product launch</p></div></div></a>
+        <a class="p-item" href="portfolio.html#p1"><img src="assets/images/portfolio-1.png" alt="Project one" loading="lazy"><div class="overlay"><div><p data-i18n="home.portfolio.item1">Branding & web</p></div></div></a>
+        <a class="p-item" href="portfolio.html#p2"><img src="assets/images/portfolio-2.jpg" alt="Project two" loading="lazy"><div class="overlay"><div><p data-i18n="home.portfolio.item2">eCommerce</p></div></div></a>
+        <a class="p-item" href="portfolio.html#p3"><img src="assets/images/portfolio-3.jpg" alt="Project three" loading="lazy"><div class="overlay"><div><p data-i18n="home.portfolio.item3">Product launch</p></div></div></a>
       </div>
     </section>
 
     <section class="section container" id="about" aria-labelledby="about-heading">
       <div class="section-inner">
         <div>
-          <h2 id="about-heading">About BNGT</h2>
-          <p class="lead">We are a digital agency specializing in web design, branding, and marketing solutions.</p>
-          <p>Founded by Amine Bigfaine, BNGT combines creative design with technical expertise to deliver exceptional digital experiences. Our mission is to help businesses thrive in the digital world through innovative solutions and strategic thinking.</p>
+          <h2 id="about-heading" data-i18n="home.about.title">About BNGT</h2>
+          <p class="lead" data-i18n="home.about.lead">We are a digital agency specializing in web design, branding, and marketing solutions.</p>
+          <p data-i18n="home.about.body">Founded by Amine Bigfaine, BNGT combines creative design with technical expertise to deliver exceptional digital experiences. Our mission is to help businesses thrive in the digital world through innovative solutions and strategic thinking.</p>
           <div style="margin-top:18px">
             <a href="about.html" class="btn btn-ghost">Learn more about us</a>
           </div>
         </div>
         <aside>
           <div class="card" style="text-align:left">
-            <h4>Our Values</h4>
+            <h4 data-i18n="home.values.title">Our Values</h4>
             <ul style="margin-top:12px;color:#475569">
-              <li>Innovation</li>
-              <li>Quality</li>
-              <li>Collaboration</li>
-              <li>Results-driven</li>
+              <li data-i18n="home.values.li1">Innovation</li>
+              <li data-i18n="home.values.li2">Quality</li>
+              <li data-i18n="home.values.li3">Collaboration</li>
+              <li data-i18n="home.values.li4">Results-driven</li>
             </ul>
           </div>
         </aside>
@@ -124,39 +136,39 @@
     </section>
 
     <section class="section container" id="process" aria-labelledby="process-heading">
-      <h2 id="process-heading">Our Process</h2>
-      <p class="lead">How we turn ideas into reality.</p>
+      <h2 id="process-heading" data-i18n="home.process.title">Our Process</h2>
+      <p class="lead" data-i18n="home.process.lead">How we turn ideas into reality.</p>
       <div class="services-grid" data-aos="fade-up" data-aos-delay="80">
         <div class="card">
-          <h3>01. Discovery</h3>
-          <p>We start by understanding your business goals, target audience, and project requirements.</p>
+          <h3 data-i18n="home.process.step1.title">01. Discovery</h3>
+          <p data-i18n="home.process.step1.body">We start by understanding your business goals, target audience, and project requirements.</p>
         </div>
         <div class="card">
-          <h3>02. Strategy</h3>
-          <p>Develop a comprehensive plan with clear milestones and deliverables.</p>
+          <h3 data-i18n="home.process.step2.title">02. Strategy</h3>
+          <p data-i18n="home.process.step2.body">Develop a comprehensive plan with clear milestones and deliverables.</p>
         </div>
         <div class="card">
-          <h3>03. Design</h3>
-          <p>Create beautiful, user-friendly designs that align with your brand.</p>
+          <h3 data-i18n="home.process.step3.title">03. Design</h3>
+          <p data-i18n="home.process.step3.body">Create beautiful, user-friendly designs that align with your brand.</p>
         </div>
         <div class="card">
-          <h3>04. Development</h3>
-          <p>Build robust, scalable solutions using modern technologies.</p>
+          <h3 data-i18n="home.process.step4.title">04. Development</h3>
+          <p data-i18n="home.process.step4.body">Build robust, scalable solutions using modern technologies.</p>
         </div>
         <div class="card">
-          <h3>05. Launch</h3>
-          <p>Deploy your project and ensure everything runs smoothly.</p>
+          <h3 data-i18n="home.process.step5.title">05. Launch</h3>
+          <p data-i18n="home.process.step5.body">Deploy your project and ensure everything runs smoothly.</p>
         </div>
         <div class="card">
-          <h3>06. Support</h3>
-          <p>Provide ongoing maintenance and optimization services.</p>
+          <h3 data-i18n="home.process.step6.title">06. Support</h3>
+          <p data-i18n="home.process.step6.body">Provide ongoing maintenance and optimization services.</p>
         </div>
       </div>
     </section>
 
     <section class="section container" id="team" aria-labelledby="team-heading">
-      <h2 id="team-heading">Meet the Team</h2>
-      <p class="lead">The creative minds behind BNGT.</p>
+      <h2 id="team-heading" data-i18n="home.team.title">Meet the Team</h2>
+      <p class="lead" data-i18n="home.team.lead">The creative minds behind BNGT.</p>
       <div class="services-grid" data-aos="fade-up" data-aos-delay="80">
         <div class="card">
           <img src="assets/images/crown.png" alt="Amine Bigfaine" style="width:80px;height:80px;border-radius:40%;margin-bottom:12px;">
@@ -183,58 +195,62 @@
     <section class="section container" aria-labelledby="testimonials-heading">
       <h2 id="testimonials-heading">What clients say</h2>
       <div class="testimonials" data-aos="fade-up" data-aos-delay="120">
-        <div class="testimonial"> <p>"BNGT delivered a flawless website that lifted conversions."</p><small>— CEO, Startup X</small></div>
-        <div class="testimonial"> <p>"Creative, responsive and on time."</p><small>— Head of Marketing, Brand Y</small></div>
+        <div class="testimonial"> <p data-i18n="home.testimonial1">"BNGT delivered a flawless website that lifted conversions."</p><small>— CEO, Startup X</small></div>
+        <div class="testimonial"> <p data-i18n="home.testimonial2">"Creative, responsive and on time."</p><small>— Head of Marketing, Brand Y</small></div>
       </div>
     </section>
 
     <section class="section container" id="newsletter" aria-labelledby="newsletter-heading">
       <div style="text-align:center">
-        <h2 id="newsletter-heading">Stay Updated</h2>
-        <p class="lead">Subscribe to our newsletter for the latest insights and updates.</p>
+        <h2 id="newsletter-heading" data-i18n="home.news.title">Stay Updated</h2>
+        <p class="lead" data-i18n="home.news.lead">Subscribe to our newsletter for the latest insights and updates.</p>
         <form style="max-width:400px;margin:0 auto;margin-top:18px">
-          <input type="email" placeholder="Your email address" style="width:100%;padding:12px;border-radius:10px;margin-bottom:12px;">
-          <button type="submit" class="btn btn-primary">Subscribe</button>
+          <input type="email" placeholder="Your email address" data-i18n-placeholder="home.news.placeholder" style="width:100%;padding:12px;border-radius:10px;margin-bottom:12px;">
+          <button type="submit" class="btn btn-primary" data-i18n="home.news.submit">Subscribe</button>
         </form>
       </div>
     </section>
 
     <section class="section container" id="faq" aria-labelledby="faq-heading">
-      <h2 id="faq-heading">Frequently Asked Questions</h2>
+      <h2 id="faq-heading" data-i18n="home.faq.title">Frequently Asked Questions</h2>
       <div class="services-grid" data-aos="fade-up" data-aos-delay="80">
         <div class="card">
-          <h3>How long does a project take?</h3>
-          <p>Project timelines vary depending on complexity, but most web projects are completed within 4-8 weeks.</p>
+          <h3 data-i18n="home.faq.q1">How long does a project take?</h3>
+          <p data-i18n="home.faq.a1">Project timelines vary depending on complexity, but most web projects are completed within 4-8 weeks.</p>
         </div>
         <div class="card">
-          <h3>Do you provide ongoing support?</h3>
-          <p>Yes, we offer maintenance and support packages to keep your digital products running smoothly.</p>
+          <h3 data-i18n="home.faq.q2">Do you provide ongoing support?</h3>
+          <p data-i18n="home.faq.a2">Yes, we offer maintenance and support packages to keep your digital products running smoothly.</p>
         </div>
         <div class="card">
-          <h3>What technologies do you use?</h3>
-          <p>We use modern technologies like React, Vue.js, Node.js, and cloud platforms for scalable solutions.</p>
+          <h3 data-i18n="home.faq.q3">What technologies do you use?</h3>
+          <p data-i18n="home.faq.a3">We use modern technologies like React, Vue.js, Node.js, and cloud platforms for scalable solutions.</p>
         </div>
         <div class="card">
-          <h3>How do you handle revisions?</h3>
-          <p>We include a set number of revisions in our packages and work collaboratively to achieve your vision.</p>
+          <h3 data-i18n="home.faq.q4">How do you handle revisions?</h3>
+          <p data-i18n="home.faq.a4">We include a set number of revisions in our packages and work collaboratively to achieve your vision.</p>
         </div>
       </div>
     </section>
 
     <section class="section container cta">
       <div style="text-align:center">
-        <h2>Start your next project</h2>
-        <p class="lead">Tell us about your goals and we’ll build a plan that fits.</p>
-        <a href="contact.html" class="btn btn-primary">Get in touch</a>
+        <h2 data-i18n="home.cta.title">Start your next project</h2>
+        <p class="lead" data-i18n="home.cta.lead">Tell us about your goals and we’ll build a plan that fits.</p>
+        <a href="contact.html" class="btn btn-primary" data-i18n="home.cta.btn">Get in touch</a>
       </div>
     </section>
   </main>
 
   <footer class="footer">
     <div class="container">
-      <p>© <span data-year></span> BNGT Agency — Crafted by SuNNNy_r.</p>
+      <p data-i18n="footer.copy">© <span data-year></span> BNGT Agency — Crafted by SuNNNy_r.</p>
     </div>
   </footer>
+  <div id="cookieBanner" class="cookie-banner" style="display:none">
+    <p data-i18n="cookie.text">We use cookies to improve your experience.</p>
+    <button id="cookieAccept" class="btn btn-primary" data-i18n="cookie.accept">Accept</button>
+  </div>
 
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="js/main.js"></script>
